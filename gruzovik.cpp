@@ -25,7 +25,7 @@ void launchServer() {
         std::cout.rdbuf(&cout_fcgi_streambuf);
         std::cerr.rdbuf(&cerr_fcgi_streambuf);
 
-        std::cout << createUI(request);
+        std::cout << "Content-Type: text/html; charset=UTF-8\r\n\r\n" << createUI(request);
     }
 
     // restore stdio streambufs
